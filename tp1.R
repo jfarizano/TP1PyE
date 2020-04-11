@@ -6,7 +6,7 @@ tablasAltura <- function(Altura, fuente) {
   frecRel <- round(frecAbs/length(Altura), digits = 4)
   frecAbsAcum = cumsum(frecAbs)
   frecRelAcum = round(cumsum(frecAbs/length(Altura)), digits = 4)
-  tabla_altura <<- cbind(frecAbs, frecRel, frecAbs, frecAbsAcum, frecRelAcum)
+  tabla_altura <<- cbind(frecAbs, frecAbsAcum, frecRel, frecRelAcum)
   
   # Histograma
   tit <- "ALTURA DE LOS ÁRBOLES"
@@ -18,7 +18,7 @@ tablasAltura <- function(Altura, fuente) {
   axis(side = 2, at = seq(0, 100, 10))
   
   # Polígono acumulativo
-  plot(c(frecRelAcum, 1), type = "l", main = tit, sub = fuente, xlab = "Altura (en metros)", 
+  plot(c(0, frecRelAcum), type = "l", main = tit, sub = fuente, xlab = "Altura (en metros)", 
        ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2, xlim = c(1, 8))
   axis(side = 1, at = (1:8), labels = seq(0, 35, 5))
   abline(h = seq(0, 1, 0.2), lty = 3)
@@ -33,7 +33,7 @@ tablasDiametro <- function(Diametro, fuente){
   frecRel <- round(frecAbs/length(Diametro), digits = 4)
   frecAbsAcum = cumsum(frecAbs)
   frecRelAcum = round(cumsum(frecAbs/length(Diametro)), digits = 4)
-  tabla_diametro <<- cbind(frecAbs, frecRel, frecAbs, frecAbsAcum, frecRelAcum)
+  tabla_diametro <<- cbind(frecAbs, frecAbsAcum, frecRel, frecRelAcum)
   
   # Histograma
   tit <- "DIÁMETRO DE LOS ÁRBOLES"
@@ -45,7 +45,7 @@ tablasDiametro <- function(Diametro, fuente){
   axis(side = 2, at = seq(0, 150, 10))
   
   # Polígono acumulativo.
-  plot(c(frecRelAcum, 1), type = "l", main = tit, sub = fuente, xlab = "Diámetro (en cm)", 
+  plot(c(0, frecRelAcum), type = "l", main = tit, sub = fuente, xlab = "Diámetro (en cm)", 
        ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2)
   axis(side = 1, at = (1:8), labels = seq(0, 140, 20))
   abline(h = seq(0, 1, 0.2), lty = 3)
@@ -56,7 +56,7 @@ tablasInclinacion <- function(Inclinacion, fuente) {
   frecRel <- round(frecAbs/length(Inclinacion), digits = 4)
   frecAbsAcum = cumsum(frecAbs)
   frecRelAcum = round(cumsum(frecAbs/length(Inclinacion)), digits = 4)
-  tabla_inclinacion <<- cbind(frecAbs, frecRel, frecAbs, frecAbsAcum, frecRelAcum)
+  tabla_inclinacion <<- cbind(frecAbs, frecAbsAcum, frecRel, frecRelAcum)
   
   tit <- "INCLINACIÓN DE LOS ÁRBOLES"
   b <- seq(0, 45, 9)

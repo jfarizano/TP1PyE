@@ -1,0 +1,74 @@
+agregar desviaciones!!!
+
+Conclusiones del TP:
+
+-) Variable: Altura
+
+Tipo de variable: cuantitativa continua.
+Grafico utilizado: histograma.
+Media: 14.02
+Mediana: 14.00
+
+Conclusiones:
+
+-> Se obtuvo un histograma simétrico.
+-> La altura promedio es de 14.02m
+-> La mayoría de los árboles miden entre 10 y 15 metros (histograma)
+-> Aproximadamente el 80% de los árboles mide menos de 15m (grafico acumulativo)
+
+-) Variable: Diámetro
+
+Tipo de variable: cuantitativa continua
+Gráfico utilizado: histograma
+Media: 37.61
+Mediana: 32.00
+
+Conclusiones:
+
+-> Se obtuvo un histograma asimetrico a la derecha.
+-> El diámetro promedio es de 37.61 cm
+-> La mayoría de los árboles tienen un diámetro de entre 20 y 40 cm. (histograma)
+-> Aproximadamente el 80% de los árboles tienen un diámetro menor a 40cm (gráfico acumulativo)
+
+-) Variable: Inclinación
+
+Tipo de variable: cuantitativa continua
+Grafico utilizado: histograma
+Media: 2.78
+Mediana: 0.00
+
+Conclusiones:
+
+-> Se obtuvo un histograma asimétrico a la derecha.
+-> La inclinación promedio es de 2.78 (en radianes)
+-> La mayoría de los árboles poseen una inclinación de entre 0 y 9 radianes.
+-> Aproximadamente más del 95% de los árboles tienen una inclinación de entre 0 y 9 radianes
+
+-) Variable: Especie
+
+Tipo de variable: cualitativa
+Grafico utilizado: gráfico de barras
+Moda: Eucalipto (especie más frecuentada)
+
+-) Variable: Origen
+
+Tipo de variable: cualitativa
+Grafico utilizado: grafico de torta
+Moda: Exótico
+
+-) Variable: brotes
+
+Tipo de variable: cuantitativa discreta
+Grafico utilizado: gráfico de bastones
+Media: 3.55
+Mediana: 3 o 3.5?? (revisar)
+
+Conclusiones:
+
+-> La mayoría de los árboles presentan entre 3 y 4 brotes crecidos durante el último año.
+
+-) Variable: cantidad de brotes por especie (cruzado)
+
+-> La especie Jacarandá es la que presenta más brotes crecidos durante el último año.
+
+(hay que explicar que en cada especie se suma la cantidad total de brotes de cada arbol de esa misma especie??)

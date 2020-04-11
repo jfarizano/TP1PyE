@@ -1,0 +1,106 @@
+TRABAJO PRÁCTICO N° 1
+
+Estado de la arboleda en el sur de Buenos Aires
+
+Probabilidad y Estadística
+
+Licenciatura en Cs. de la Computación
+
+Facultad de Ciencias Exactas Ingeniería y Agrimensura
+
+Integrantes: Farizano, Juan Ignacio - Mellino, Natalia Belén
+
+Fecha: 17 de abril, 2020
+
+----------------------------------------------------------- 
+
+Índice: 
+
+1) Introduccion
+2) Análisis univariado
+  - Altura
+  - Diámetro
+  - Inclinación
+  - Especie
+  - Origen
+  - Brotes
+3) Análisis bivariado
+  - Especie/Origen
+  - Especie/Brotes
+
+-----------------------------------------------------------
+
+Seccion  1: Introducción
+
+- Motivación del problema:
+
+En el año 2011 se realizó un Censo Forestal Urbano Público en dos
+comunas del sur de Buenos Aires, en este informe analizaremos los datos de
+dicho censo con el objetivo de determinar el estado actual del arbolado urbano 
+público.
+
+Las variables incluidas en la base de datos dada se describen a continuación.
+
+**(insertar tabla con nombre de variable, descripción y tipo)**
+
+
+------------------------------------------------------------
+
+Sección 2: Análisis univariado
+
+2.1) Altura
+
+** tabla 1 **
+
+** histograma  poligono **
+
+El gráfico x es unimodal y asimétrico hacia la derecha, donde se puede observar
+que una mayor cantidad de árboles tienen una altura entre 10 y 15 mts.
+Si se observa el polígono acumulativo de la figura ... junto con la tabla 1
+se puede ver que aproximadamente el 97% de la arboleda presenta una altura 
+inferior a 25 mts. 
+La altura promedio es de 14.02mts.
+
+
+2.2) Diámetro
+
+** tabla 2 **
+
+** histograma  poligono **
+
+Como se puede observar en el histograma de la figura _, éste es 
+asimétrico a la derecha, mostrando una mayor cantidad de árboles que
+poseen un diámetro de entre 20 y 40 cm. El diámetro promedio resultó ser 
+de 37.61 cm. Observando el polígono acumulativo de la figura _ se puede
+comprobar que aproximadamente el 80% (revisar esto) de los árboles tienen un diámetro 
+menor a 60cm.
+
+2.3) Inclinación (dejo en blanco xq ibamos a cambiarlo por el boxplot)
+
+2.4) Especie
+
+** tabla **
+** grafico de barras **
+
+Si se observa el gráfico de la figura _, se puede ver que la especie
+con más ejemplares en el censo resultó ser el eucalipto con una cantidad 
+total de 67, seguido por Álamo con 59 y Casuarina con 55.
+
+2.5) Origen
+
+Observando la figura __ se puede ver que el 68.86% de los árboles es de 
+origen exótico y 31.14% de origen Nativo/Autóctono.
+
+
+2.6) Brotes
+
+** grafico bastones** (es necesario poner tabla??)
+
+En el gráfico de la figura __ se observa que existe una mayor cantidad
+de árboles que presentaron 3 brotes crecidos durante el último año.
+La cantidad de brotes promedio resultó ser 3.5. (revisar promedio)
+
+
+Seccion 3: Análisis bivariado
+
+---(completar)
