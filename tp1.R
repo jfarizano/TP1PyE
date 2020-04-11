@@ -52,25 +52,14 @@ tablasDiametro <- function(Diametro, fuente){
 }
 
 tablasInclinacion <- function(Inclinacion, fuente) {
-  frecAbs <- table(cut(Inclinacion, seq(0, 45, 9), right = "FALSE"))
+  frecAbs <- table(cut(Inclinacion, seq(0, 42, 7), right = "FALSE"))
   frecRel <- round(frecAbs/length(Inclinacion), digits = 4)
   frecAbsAcum = cumsum(frecAbs)
   frecRelAcum = round(cumsum(frecAbs/length(Inclinacion)), digits = 4)
   tabla_inclinacion <<- cbind(frecAbs, frecAbsAcum, frecRel, frecRelAcum)
   
   tit <- "INCLINACIÓN DE LOS ÁRBOLES"
-  b <- seq(0, 45, 9)
-  hist(Inclinacion, main = tit, xlab = "Inclinación (en grados)", ylab = "Frecuencia absoluta", 
-       xlim = c(0, 45), ylim = c(0, 320), sub = fuente, col = "lightblue", 
-       breaks = b, xaxt = "n", yaxt = "n", right = FALSE, font.lab = 2)
-  axis(side = 1, at = b)
-  axis(side = 2, at = seq(0, 320, 20))
-  
-  # Polígono acumulativo.
-  plot(c(frecRelAcum, 1), type = "l", main = tit, sub = fuente, xlim = c(1,6), ylim = c(0.85, 1), 
-       xlab = "Inclinación (en grados)", ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2)
-  axis(side = 1, at = (1:6), labels = seq(0, 45, 9))
-  abline(h = seq(0.85, 1, 0.05), lty = 3)
+  boxplot(Inclinacion, main = tit, sub = fuente, col = "orange", ylab = "Inclinación (en grados)", font = 2, ylim = c(0, 45))
 }
 
 tablasEspecie <- function(Especie, fuente) {
@@ -96,7 +85,7 @@ tablasBrotes <- function(Brotes, fuente) {
   frecAbs <- table(Brotes)
   
   tit <- "BROTES CRECIDOS POR ÁRBOL\nEN EL ÚLTIMO AÑO"
-  plot(frecAbs, type = "h", main = tit, sub = fuente, xlab = "Cantidad de brotes", ylab = "Frecuencia absoluta", font.lab = 2)
+  plot(frecAbs, type = "h", main = tit, sub = fuente, xlab = "Cantidad de brotes", ylab = "Frecuencia absoluta", font.lab = 2, ylim = c(0, 105))
 }
 
 tablasEspecieOrigen <- function(Especie, Origen, fuente) {

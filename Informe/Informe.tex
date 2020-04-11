@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+% \usepackage[spanish]{babel}
+% \usepackage[spanish]{layout}
+\usepackage[document]{ragged2e}
+\usepackage{lmodern}
+\usepackage{textcomp}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\begin{document}
+
+\title{
+  TRABAJO PRÁCTICO N° 1\\
+  \large Estado de la arboleda en el sur de Buenos Aires
+}
+
+\author{
+  Farizano, Juan Ignacio\\
+  \and
+  Mellino, Natalia
+}
+\date{}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+\textbf{Motivación del problema:}
+
+\justify{
+En el año 2011 se realizó un Censo Forestal Urbano Público en dos
+comunas del sur de Buenos Aires, en este informe analizaremos los datos de
+dicho censo con el objetivo de determinar el estado actual del arbolado urbano 
+público.\\
+Las variables incluidas en la base de datos dada se describen a continuación.
+}
+% Tabla de variables
+\begin{center}
+\begin{tabular}{| l | p{6cm} | l |}
+\hline
+Nombre & Descripción & Tipo de variable \\ \hline
+ID & Identificación del árbol. & Cualitativa nominal \\ \hline
+Altura & Altura de cada árbol, medida en metros (m). Observación: si un árbol
+mide 12,7 m se tomará como dato “12”, truncando los valores a la unidad. & 
+Cuantitativa continua \\ \hline
+Diámetro & Diámetro de cada árbol, medido en centímetros (cm). & 
+Cuantitativa continua \\ \hline
+Inclinación & Ángulo que forma el tronco del árbol respecto a una perpendicular al suelo,
+medido en grados ( ° ). Indica el grado de inclinación del árbol. &
+Cuantitativa continua \\ \hline
+Especie & Especie a la que pertenece el árbol, dentro de las siguientes
+categorías: Eucalipto, Jacarandá, Palo Borracho, Casuarina, Fresno, Ceibo,
+Ficus, Álamo, Acacia. & Cualitativa nominal \\ \hline
+Origen & Procedencia de la especie: Exótico, Nativo/Autóctono, No Determinado.
+& Cualitativa nominal \\ \hline
+Brotes & Número de brotes jóvenes crecidos durante el último año. &
+Cuantitativa discreta \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+\section{Análisis univariado}
+
+\subsection{Altura}
+
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.9\linewidth}
+    \includegraphics[width=\linewidth]{histAltura.pdf}
+    \caption{Test 1.}
+    \label{fig:histAltura}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.9\linewidth}
+    \includegraphics[width=\linewidth]{acumAltura.pdf}
+    \caption{Test 2.}
+    \label{fig:acumAltura}
+  \end{subfigure}  
+\end{figure}
+
+El gráfico \ref{fig:histAltura} es unimodal y asimétrico hacia la derecha,
+donde se puede observar
+que una mayor cantidad de árboles tienen una altura entre 10 y 15 mts.
+Si se observa el polígono acumulativo de la figura \ref{fig:acumAltura} 
+junto con la tabla 1 se puede ver que aproximadamente el 97\% de la arboleda 
+presenta una altura inferior a 25 mts. La altura promedio es de 14.02mts.
+
+\subsection{Diámetro}
+\subsection{Inclinación}
+\subsection{Especie}
+\subsection{Origen}
+\subsection{Brotes}
+
+\section{Análisis bivariado}
+\subsection{Origen/Especie}
+\subsection{Brotes/Especie}
+
+\end{document}
