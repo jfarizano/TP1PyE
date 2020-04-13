@@ -7,16 +7,11 @@
 \usepackage{textcomp}
 \usepackage{subcaption}
 \usepackage{graphicx}
-\usepackage{booktabs}
-\usepackage{siunitx}
-\usepackage{pgfplotstable}
+\usepackage{multirow}
 
-\pgfplotsset{compat=1.16}
-
-\sisetup{
-  round-mode          = places,
-  round-precision     = 4,
-}
+% ============================================================================
+% ============================================================================
+% ============================================================================
 
 \begin{document}
 
@@ -35,6 +30,10 @@
 
 \tableofcontents
 \newpage
+
+% ============================================================================
+% ============================================================================
+% ============================================================================
 
 \section{Introducción}
 \textbf{Motivación del problema:}
@@ -57,9 +56,9 @@
     Cuantitativa continua \\ \hline
     Diámetro & Diámetro de cada árbol, medido en centímetros (cm). & 
     Cuantitativa continua \\ \hline
-    Inclinación & Ángulo que forma el tronco del árbol respecto a una perpendicular al suelo,
-    medido en grados (°). Indica el grado de inclinación del árbol. &
-    Cuantitativa continua \\ \hline
+    Inclinación & Ángulo que forma el tronco del árbol respecto
+    a una perpendicular al suelo, medido en grados (°).
+    Indica el grado de inclinación del árbol. & Cuantitativa continua \\ \hline
     Especie & Especie a la que pertenece el árbol, dentro de las siguientes
     categorías: Eucalipto, Jacarandá, Palo Borracho, Casuarina, Fresno, Ceibo,
     Ficus, Álamo, Acacia. & Cualitativa nominal \\ \hline
@@ -70,39 +69,35 @@
   \end{tabular}
 \end{center}
 
-\newpage
+% ============================================================================
+% ============================================================================
+% ============================================================================
 
+\newpage
 \section{Análisis univariado}
 
 \subsection{Altura}
 
 \begin{table}[h!]
-  \begin{center}   
-	  \pgfplotstabletypeset[
-      multicolumn names,
-      col sep=semicolon,
-      string type,
-      display columns/0/.style={
-		    column name=\textbf{Valores},
-		    column type={c}},
-      display columns/1/.style={
-		    column name=\textbf{frecAbs},
-        column type={r}},
-      display columns/2/.style={
-		    column name=\textbf{frecAbsAcum},
-		    column type={r}},
-      display columns/3/.style={
-		    column name=\textbf{frecRel},
-        column type={S}},
-      display columns/4/.style={
-        column name=\textbf{frecRelAcum},
-      column type={S}},
-      every head row/.style={before row=\toprule,after row=\midrule},
-      every last row/.style={after row=\bottomrule},
-      every first column/.style={column type/.add={|}{}},
-      every last column/.style={column type/.add={}{|}},
-    ]{tablaAltura.csv}
-    \caption{Tabla de frecuencia.}
+  \begin{center}
+    \begin{tabular}{| c | r | r | r | r |}
+      \hline
+      \multirow{3}{*}{\textbf{Valores}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia absoluta}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia absoluta acumulada}} &
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia relativa}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia relativa acumulada}} \\
+      & & & & \\
+      & & & & \\ \hline
+      (0,5] & 34 & 34 & 0.0971 & 0.0971 \\ \hline
+      (5,10] & 79 & 113 & 0.2257 & 0.3229 \\ \hline
+      (10,15] & 92 & 205 & 0.2629 & 0.5857 \\ \hline
+      (15,20] & 84 & 289 & 0.24 & 0.8257 \\ \hline
+      (20,25] & 53 & 342 & 0.1514 & 0.9771 \\ \hline
+      (25,30] & 5 & 347 & 0.0143 & 0.9914 \\ \hline
+      (30,35] & 3 & 350 & 0.0086 & 1 \\ \hline
+    \end{tabular}
+    \caption{Tabla de frecuencias.}
     \label{tab:tablaAltura}
   \end{center}
 \end{table}
@@ -119,6 +114,7 @@
       \caption{Polígono acumulativo.}
       \label{fig:acumAltura}
     \end{subfigure}
+  \caption{}
   \end{center}  
 \end{figure}
 
@@ -127,18 +123,227 @@
   donde se puede observar
   que una mayor cantidad de árboles tienen una altura entre 10 y 15 mts.
   Si se observa el polígono acumulativo de la figura \ref{fig:acumAltura} 
-  junto con la tabla 1 se puede ver que aproximadamente el 97\% de la arboleda 
-  presenta una altura inferior a 25 mts. La altura promedio es de 14.02mts.
+  junto con la tabla \ref{tab:tablaAltura} se puede ver que aproximadamente
+  el 97\% de la arboleda presenta una altura inferior a 25 mts.
+  La altura promedio es de 14.02mts.
 \end{justify}
 
+% ============================================================================
+
+\newpage
 \subsection{Diámetro}
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{| c | r | r | r | r |}
+      \hline
+      \multirow{3}{*}{\textbf{Valores}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia absoluta}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia absoluta acumulada}} &
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia relativa}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia relativa acumulada}} \\
+      & & & & \\
+      & & & & \\ \hline
+      (0,20] & 83 & 83 & 0.2371 & 0.2371 \\ \hline
+      (20,40] & 147 & 230 & 0.42 & 0.6571 \\ \hline
+      (40,60] & 69 & 299 & 0.1971 & 0.8543 \\ \hline
+      (60,80] & 35 & 334 & 0.1 & 0.9543 \\ \hline
+      (80,100] & 12 & 346 & 0.0343 & 0.9886 \\ \hline
+      (100,120] & 2 & 348 & 0.0057 & 0.9943 \\ \hline
+      (120,140] & 2 & 350 & 0.0057 & 1 \\ \hline
+    \end{tabular}
+    \caption{Tabla de frecuencias.}
+    \label{tab:tablaDiametro}
+  \end{center}
+\end{table}
+
+\begin{figure}[h!]
+  \begin{center}
+    \begin{subfigure}[b]{0.49\linewidth}
+      \includegraphics[width=\linewidth]{histDiametro.pdf}
+      \caption{Histograma.}
+      \label{fig:histDiametro}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.49\linewidth}
+      \includegraphics[width=\linewidth]{acumDiametro.pdf}
+      \caption{Polígono acumulativo.}
+      \label{fig:acumDiametro}
+    \end{subfigure}
+  \caption{}
+  \end{center}  
+\end{figure}
+
+\begin{justify}
+  Como se puede observar en el histograma de la figura \ref{fig:histDiametro}, 
+  éste es asimétrico a la derecha, mostrando una mayor cantidad de árboles que
+  poseen un diámetro de entre 20 y 40 cm. El diámetro promedio resultó ser 
+  de 37.61 cm. Observando el polígono acumulativo de la figura
+  \ref{fig:acumDiametro} se puede comprobar que aproximadamente el 80\%
+  de los árboles tienen un diámetro menor a 60cm.
+\end{justify}
+
+% ============================================================================
+
+\newpage
 \subsection{Inclinación}
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{| c | r | r | r | r |}
+      \hline
+      \multirow{3}{*}{\textbf{Valores}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia absoluta}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia absoluta acumulada}} &
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia relativa}} & 
+      \multirow{3}{3cm}{\centering\textbf{Frecuencia relativa acumulada}} \\
+      & & & & \\
+      & & & & \\ \hline
+      [0,7) & 294 & 294 & 0.84 & 0.84 \\ \hline
+      [7,14) & 34 & 328 & 0.0971 & 0.9371 \\ \hline
+      [14,21) & 13 & 341 & 0.0371 & 0.9743 \\ \hline
+      [21,28) & 4 & 345 & 0.0114 & 0.9857 \\ \hline
+      [28,35) & 2 & 347 & 0.0057 & 0.9914 \\ \hline
+      [35,42) & 3 & 350 & 0.0086 & 1 \\ \hline
+    \end{tabular}
+    \caption{Tabla de frecuencias.}
+    \label{tab:tablaInclinacion}
+  \end{center}
+\end{table}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\linewidth]{boxInclinacion.pdf}
+    \caption{Gráfico de caja.}
+    \label{fig:boxInclinacion}
+  \end{center}  
+\end{figure}
+
+\begin{justify}
+  En el gráfico de caja \ref{fig:boxInclinacion} se observa que la mediana
+  es de 0 grados, siendo que aproximadamente el 73\% de los árboles tienen
+  esta inclinación, y además observando la tabla \ref{tab:tablaInclinacion}
+  se ve que los valores adyacentes que van de una inclinación de 0 a 7 grados
+  componen el 84\% de la arboleda. Fuera de este rango, se encuentran
+  52 observaciones outliers. 
+\end{justify}
+
+% ============================================================================
+
+\newpage
 \subsection{Especie}
+
+\begin{table}[h!]
+  \begin{center}
+    \begin{tabular}{| c | r |}
+      \hline
+      \textbf{Especie} & \textbf{Frecuencia absoluta} \\ \hline
+      Acacia & 25 \\ \hline
+      Álamo & 59 \\ \hline
+      Casuarina & 55 \\ \hline
+      Ceibo & 17 \\ \hline
+      Eucalipto & 67 \\ \hline
+      Ficus & 12 \\ \hline
+      Fresno & 30 \\ \hline
+      Jacarandá & 44 \\ \hline
+      Palo borracho & 41 \\ \hline
+    \end{tabular}
+    \caption{Tabla de frecuencias.}
+    \label{tab:tablaEspecie}
+  \end{center}
+\end{table}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\linewidth]{barrasEspecie.pdf}
+    \caption{Gráfico de barras.}
+    \label{fig:barrasEspecie}
+  \end{center}  
+\end{figure}
+
+\begin{justify}
+  Si se observa el gráfico de la figura \ref{fig:barrasEspecie},
+  se puede ver que la especie con más ejemplares en el censo resultó
+  ser el eucalipto con una cantidad total de 67, seguido por Álamo
+  con 59 y Casuarina con 55.
+\end{justify}
+
+% ============================================================================
+
+\newpage
 \subsection{Origen}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\linewidth]{tortaOrigen.pdf}
+    \caption{Gráfico de torta.}
+    \label{fig:tortaOrigen}
+  \end{center}  
+\end{figure}
+
+\begin{justify}
+  Observando la figura \ref{fig:tortaOrigen} se puede ver que el 68.86\% de los
+  árboles es de origen exótico y 31.14\% de origen Nativo/Autóctono.
+\end{justify}
+
+% ============================================================================
+
+\newpage
 \subsection{Brotes}
 
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\linewidth]{bastonesBrotes.pdf}
+    \caption{Gráfico de bastones.}
+    \label{fig:bastonesBrotes}
+  \end{center}  
+\end{figure}
+
+\begin{justify}
+  En el gráfico de la figura \ref{fig:bastonesBrotes} se observa que
+  existe una mayor cantidad de árboles que presentaron 3 brotes crecidos
+  durante el último año. La cantidad de brotes promedio resultó ser 3.5.
+\end{justify}
+
+% ============================================================================
+% ============================================================================
+% ============================================================================
+
+\newpage
 \section{Análisis bivariado}
 \subsection{Origen/Especie}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\linewidth]{barrasOrigenEspecie.pdf}
+    \caption{Gráfico de barras.}
+    \label{fig:barrasOrigenEspecie}
+  \end{center}  
+\end{figure}
+
+\begin{justify}
+  En la figura \ref{fig:barrasOrigenEspecie} se puede notar fácilmente
+  las especies que son exclusivamente nativas o exóticas, excepto por la Acacia
+  que es tanto nativa como exótica. La mayoria de las especies resultan ser
+  de origen exótico.
+\end{justify}
+
+% ============================================================================
+
+\newpage
 \subsection{Brotes/Especie}
+
+\begin{figure}[h!]
+  \begin{center}
+    \includegraphics[width=\linewidth]{barrasBrotesEspecie.pdf}
+    \caption{Gráfico de barras.}
+    \label{fig:barrasBrotesEspecie}
+  \end{center}  
+\end{figure}
+
+\begin{justify}
+  En el gráfico \ref{fig:barrasBrotesEspecie} se puede observar la cantidad
+  de brotes que cada especie de árbol presentó durante el último año, siendo
+  el Jacarandá la especie que mas brotes ha tenido.
+\end{justify}
 
 \end{document}
