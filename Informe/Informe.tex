@@ -14,8 +14,6 @@
 % ============================================================================
 % ============================================================================
 
-\begin{document}
-
 \title{
   TRABAJO PRÁCTICO N° 1\\
   \large Estado de la arboleda en el sur de Buenos Aires
@@ -26,6 +24,13 @@
   Mellino, Natalia
 }
 \date{}
+
+% ============================================================================
+% ============================================================================
+% ============================================================================
+
+\begin{document}
+
 \maketitle
 \newpage
 
@@ -41,17 +46,19 @@
 
 \begin{justify}
   En el año 2011 se realizó un Censo Forestal Urbano Público en dos
-  comunas del sur de Buenos Aires, en este informe analizaremos los datos de
-  dicho censo con el objetivo de determinar el estado actual del arbolado urbano 
-  público.\\
+  comunas del sur de Buenos Aires y esta será nuestra fuente de información
+  a lo largo del informe.
+  En éste analizaremos los datos de dicho censo con el objetivo
+  de determinar el estado actual del arbolado urbano público.\\
   Las variables incluidas en la base de datos dada se describen a continuación.
 \end{justify}
+
 % Tabla de variables
 \begin{center}
   \begin{tabular}{| c | p{9cm} | c |}
     \hline
     \textbf{Nombre} & \textbf{Descripción} & \textbf{Tipo de variable} \\ \hline
-    ID & Identificación del árbol. & Cualitativa nominal \\ \hline
+    ID & Identificación del árbol. & - \\ \hline
     Altura & Altura de cada árbol, medida en metros (m). Observación: si un árbol
     mide 12,7 m se tomará como dato “12”, truncando los valores a la unidad. & 
     Cuantitativa continua \\ \hline
@@ -290,9 +297,9 @@
   \begin{center}
     \begin{tabular}{| c | r | r |}
       \hline
-      \textbf{Especie} & \textbf{Frecuencia absoluta} & \textbf{Porcentaje} \\ \hline
-      Exótico	& 241	& 68.86\% \\ \hline
-      Nativo/Autóctono & 109 & 31.14\% \\ \hline
+      \textbf{Especie} & \textbf{Frecuencia absoluta} & \textbf{Frecuencia relativa} \\ \hline
+      Exótico	& 241	& 0.6886 \\ \hline
+      Nativo/Autóctono & 109 & 0.3114 \\ \hline
     \end{tabular}
     \caption{Tabla de frecuencias.}
     \label{tab:tablaOrigen}
@@ -301,14 +308,14 @@
 
 \begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.9\linewidth]{tortaOrigen.pdf}
+    \includegraphics[width=0.9\linewidth]{pieOrigen.pdf}
     \caption{Gráfico de torta.}
-    \label{fig:tortaOrigen}
+    \label{fig:pieOrigen}
   \end{center}  
 \end{figure}
 
 \begin{justify}
-  Observando la figura \ref{fig:tortaOrigen} se puede ver que el 68.86\% de los
+  Observando la figura \ref{fig:pieOrigen} se puede ver que el 68.86\% de los
   árboles es de origen exótico y 31.14\% de origen Nativo/Autóctono.
 \end{justify}
 
@@ -345,11 +352,27 @@
 
 \begin{figure}[h!]
   \begin{center}
-    \includegraphics[width=0.9\linewidth]{bastonesBrotes.pdf}
-    \caption{Gráfico de bastones.}
-    \label{fig:bastonesBrotes}
+    \begin{subfigure}[b]{0.9\linewidth}
+      \includegraphics[width=\linewidth]{bastonesBrotes.pdf}
+      \caption{Gráfico de bastones.}
+      \label{fig:bastonesBrotes}
+    \end{subfigure}
+  \end{center}
+\end{figure}
+
+\begin{figure}[h!]
+  \ContinuedFloat
+  \begin{center}
+    \begin{subfigure}[b]{0.9\linewidth}
+      \includegraphics[width=\linewidth]{acumBrotes.pdf}
+      \caption{Polígono acumulativo.}
+      \label{fig:acumBrotes}
+    \end{subfigure}
+  \caption{}
   \end{center}  
 \end{figure}
+
+\newpage
 
 \begin{justify}
   En el gráfico de la figura \ref{fig:bastonesBrotes} se observa que

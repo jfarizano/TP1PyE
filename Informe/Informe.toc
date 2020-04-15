@@ -7,6 +7,6 @@
 \contentsline {subsection}{\numberline {2.4}Especie}{8}% 
 \contentsline {subsection}{\numberline {2.5}Origen}{9}% 
 \contentsline {subsection}{\numberline {2.6}Brotes}{10}% 
-\contentsline {section}{\numberline {3}An\IeC {\'a}lisis bivariado}{11}% 
-\contentsline {subsection}{\numberline {3.1}Origen/Especie}{11}% 
-\contentsline {subsection}{\numberline {3.2}Brotes/Especie}{12}% 
+\contentsline {section}{\numberline {3}An\IeC {\'a}lisis bivariado}{12}% 
+\contentsline {subsection}{\numberline {3.1}Origen/Especie}{12}% 
+\contentsline {subsection}{\numberline {3.2}Brotes/Especie}{13}% 

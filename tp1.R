@@ -21,7 +21,7 @@ tablasAltura <- function(Altura) {
   plot(c(0, frecRelAcum), type = "l", main = tit, xlab = "Altura (en metros)", 
        ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2, xlim = c(1, 8))
   axis(side = 1, at = (1:8), labels = seq(0, 35, 5))
-  abline(h = seq(0, 1, 0.2), lty = 3)
+  abline(h = seq(0, 1, 0.1), lty = 3)
 }
 
 # Segunda variable a analizar: DIÁMETRO
@@ -48,7 +48,7 @@ tablasDiametro <- function(Diametro){
   plot(c(0, frecRelAcum), type = "l", main = tit, xlab = "Diámetro (en cm)", 
        ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2)
   axis(side = 1, at = (1:8), labels = seq(0, 140, 20))
-  abline(h = seq(0, 1, 0.2), lty = 3)
+  abline(h = seq(0, 1, 0.1), lty = 3)
 }
 
 tablasInclinacion <- function(Inclinacion) {
