@@ -91,9 +91,14 @@ tablasBrotes <- function(Brotes) {
   tabla_brotes <<- cbind(frecAbs, frecAbsAcum, frecRel, frecRelAcum)
   
   tit <- "BROTES CRECIDOS POR ÁRBOL\nEN EL ÚLTIMO AÑO"
-  plot(frecAbs, type = "h", main = tit, xlab = "Cantidad de brotes", ylab = "Frecuencia absoluta", font.lab = 2, ylim = c(0, 105))
+  plot(frecAbs, type = "h", main = tit, xlab = "Cantidad de brotes", 
+       ylab = "Frecuencia absoluta", font.lab = 2, ylim = c(0, 105))
   
-  plot(frecRelAcum, type = "s", main = tit, xlab = "Cantidad de brotes", ylab = "Frecuencia relativa acumulada", font.lab = 2)
+  plot(frecRelAcum, type = "s", main = tit, xlab = "Cantidad de brotes", 
+       ylab = "Frecuencia relativa acumulada", font.lab = 2, 
+       xaxt = "n", ylim = c(0, 1))
+  axis(side = 1, at = (1:9), labels = seq(0, 8, 1))
+  abline(h = seq(0, 1, 0.1), lty = 3)
   
 }
 
