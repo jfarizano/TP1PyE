@@ -23,19 +23,7 @@ tablasAltura <- function(Altura) {
   plot(c(0, frecRelAcum), type = "l", main = tit, xlab = "Altura (en metros)", 
        ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2, xlim = c(1, 8))
   axis(side = 1, at = (1:8), labels = seq(0, 35, 5))
-<<<<<<< HEAD
-  abline(h = seq(0, 1, 0.2), lty = 3)
-  
-  # Summary para altura
-  names <- c("Mínimo", "Máximo", "Media", "Mediana", "Primer Cuartil", 
-             "Segundo Cuartil", "Tercer Cuartil")
-  values <- c(min(Altura), max(Altura), round(mean(Altura), digits = 2), 
-              median(Altura), quantile(Altura)[2], quantile(Altura)[3], 
-              quantile(Altura)[4])
-  summary_altura <<- cbind(names, values)
-=======
   abline(h = seq(0, 1, 0.1), lty = 3)
->>>>>>> 6f42618ae15ebaf73b77a9c6d37fc37845cb4662
 }
 
 # Segunda variable a analizar: DIÁMETRO
@@ -59,7 +47,7 @@ tablasDiametro <- function(Diametro){
   axis(side = 2, at = seq(0, 150, 10))
   
   # Polígono acumulativo.
-  plot(c(0, frecRelAcum), type = "l", main = tit, xlab = "Diámetro (en cm)", 
+  plot(c(0, frecRelAcum), type = "l", main = tit, xlab = "Diámetro (en centímetros)", 
        ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2)
   axis(side = 1, at = (1:8), labels = seq(0, 140, 20))
   abline(h = seq(0, 1, 0.1), lty = 3)
@@ -158,7 +146,7 @@ tablasEspecieBrotes <- function(Especie, Brotes) {
 
 especieAltura <- function(Altura, Especie){
   tit <- "ALTURA DE LOS ÁRBOLES SEGÚN SU ESPECIE"
-  boxplot(Altura~Especie, main = tit, col = "orange", ylim = c(0, 40))  
+  boxplot(Altura~Especie, main = tit, col = "orange", ylim = c(0, 40), xlab = "", ylab = "")  
   title(xlab = "Especie", ylab = "Altura (en metros)", font.lab = 2)
 }
 
@@ -166,7 +154,7 @@ especieAltura <- function(Altura, Especie){
 
 leerDatos <- function() {
   #setwd("~/TP1PyE")
-  datos <- read.table(file = "base1.txt", header = TRUE, sep = "\t", 
+  datos <<- read.table(file = "base1.txt", header = TRUE, sep = "\t", 
                       col.names = c("ID", "Altura", "Diametro", "Inclinacion", "Especie", "Origen", "Brotes"))
   attach(datos)
   fuente <- "Fuente: Censo Forestal Urbano Público, Ciudad de Buenos Aires, año 2011"
