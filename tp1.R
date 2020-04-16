@@ -1,3 +1,5 @@
+# Análisis univariado:
+
 # Primer variable a analizar: ALTURA
 
 tablasAltura <- function(Altura) {
@@ -21,7 +23,19 @@ tablasAltura <- function(Altura) {
   plot(c(0, frecRelAcum), type = "l", main = tit, xlab = "Altura (en metros)", 
        ylab = "Frecuencia relativa acumulada", xaxt = "n", font.lab = 2, xlim = c(1, 8))
   axis(side = 1, at = (1:8), labels = seq(0, 35, 5))
+<<<<<<< HEAD
+  abline(h = seq(0, 1, 0.2), lty = 3)
+  
+  # Summary para altura
+  names <- c("Mínimo", "Máximo", "Media", "Mediana", "Primer Cuartil", 
+             "Segundo Cuartil", "Tercer Cuartil")
+  values <- c(min(Altura), max(Altura), round(mean(Altura), digits = 2), 
+              median(Altura), quantile(Altura)[2], quantile(Altura)[3], 
+              quantile(Altura)[4])
+  summary_altura <<- cbind(names, values)
+=======
   abline(h = seq(0, 1, 0.1), lty = 3)
+>>>>>>> 6f42618ae15ebaf73b77a9c6d37fc37845cb4662
 }
 
 # Segunda variable a analizar: DIÁMETRO
@@ -38,7 +52,7 @@ tablasDiametro <- function(Diametro){
   # Histograma
   tit <- "DIÁMETRO DE LOS ÁRBOLES"
   b <- seq(0, 140, 20)
-  hist(Diametro, main = tit, xlab = "Diámetro (en cm)", ylab = "Frecuencia absoluta", 
+  hist(Diametro, main = tit, xlab = "Diámetro (en centímetros)", ylab = "Frecuencia absoluta", 
        xlim = c(0, 140), ylim = c(0, 150), col = "lightblue", 
        breaks = b, xaxt = "n", yaxt = "n", right = TRUE, font.lab = 2)
   axis(side = 1, at = b)
@@ -51,6 +65,8 @@ tablasDiametro <- function(Diametro){
   abline(h = seq(0, 1, 0.1), lty = 3)
 }
 
+
+# Tercer variable a analizar: Inclinación
 tablasInclinacion <- function(Inclinacion) {
   frecAbs <- table(cut(Inclinacion, seq(0, 42, 7), right = "FALSE"))
   frecRel <- round(frecAbs/length(Inclinacion), digits = 4)
@@ -58,17 +74,24 @@ tablasInclinacion <- function(Inclinacion) {
   frecRelAcum = round(cumsum(frecAbs/length(Inclinacion)), digits = 4)
   tabla_inclinacion <<- cbind(frecAbs, frecAbsAcum, frecRel, frecRelAcum)
   
+  # Boxplot
   tit <- "INCLINACIÓN DE LOS ÁRBOLES"
-  boxplot(Inclinacion, main = tit, col = "orange", ylab = "Inclinación (en grados)", font = 2, ylim = c(0, 45))
+  boxplot(Inclinacion, main = tit, col = "orange", ylim = c(0, 45))
+  title(ylab = "Inclinación (en grados)", font.lab = 2)
 }
+
+# Cuarta variable a analizar: Especie
 
 tablasEspecie <- function(Especie) {
    frecAbs <- table(Especie)
    
    tit <- "ÁRBOLES SEGÚN SU ESPECIE"
+   # Grafico de barras.
    barplot(frecAbs, ylim = c(0, 70), col = "green", main = tit, xlab = "Especie", 
            ylab = "Frecuencia absoluta", font.lab = 2)
 }
+
+# Quinta variable a analizar: Origen.
 
 tablasOrigen <- function(Origen) {
   frecAbs <- table(Origen)
@@ -80,8 +103,11 @@ tablasOrigen <- function(Origen) {
   lbls <- paste(lbls, "%")
   
   tit <- "ÁRBOLES SEGÚN SU ORIGEN"
+  # Pie chart
   pie(frecAbs, labels = lbls, main = tit, col = c("purple", "cyan"))
 }
+
+# Sexta variable a analizar: N° Brotes
 
 tablasBrotes <- function(Brotes) {
   frecAbs <- table(Brotes)
@@ -91,9 +117,10 @@ tablasBrotes <- function(Brotes) {
   tabla_brotes <<- cbind(frecAbs, frecAbsAcum, frecRel, frecRelAcum)
   
   tit <- "BROTES CRECIDOS POR ÁRBOL\nEN EL ÚLTIMO AÑO"
+  # Gráfico de bastones
   plot(frecAbs, type = "h", main = tit, xlab = "Cantidad de brotes", 
        ylab = "Frecuencia absoluta", font.lab = 2, ylim = c(0, 105))
-  
+  # Gráfico escalonado
   plot(frecRelAcum, type = "s", main = tit, xlab = "Cantidad de brotes", 
        ylab = "Frecuencia relativa acumulada", font.lab = 2, 
        xaxt = "n", ylim = c(0, 1))
@@ -101,6 +128,10 @@ tablasBrotes <- function(Brotes) {
   abline(h = seq(0, 1, 0.1), lty = 3)
   
 }
+
+#----------------------------------------------------------------------------#
+
+# Análisis bivariado:
 
 tablasEspecieOrigen <- function(Especie, Origen) {
   frecAbs <- table(Origen, Especie)
@@ -125,6 +156,14 @@ tablasEspecieBrotes <- function(Especie, Brotes) {
           xlab = "Especie", ylab = "Frecuencia absoluta", font.lab = 2)
 }
 
+especieAltura <- function(Altura, Especie){
+  tit <- "ALTURA DE LOS ÁRBOLES SEGÚN SU ESPECIE"
+  boxplot(Altura~Especie, main = tit, col = "orange", ylim = c(0, 40))  
+  title(xlab = "Especie", ylab = "Altura (en metros)", font.lab = 2)
+}
+
+#-----------------------------------------------------------------------------
+
 leerDatos <- function() {
   #setwd("~/TP1PyE")
   datos <- read.table(file = "base1.txt", header = TRUE, sep = "\t", 
@@ -139,6 +178,9 @@ leerDatos <- function() {
   tablasBrotes(Brotes)
   tablasEspecieOrigen(Especie, Origen)
   tablasEspecieBrotes(Especie, Brotes)
+  especieAltura(Altura, Especie)
 }
 
+
 leerDatos()
+
