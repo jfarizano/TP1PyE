@@ -77,7 +77,7 @@ tablasInclinacion <- function(datos) {
 tablasEspecie <- function(datos) {
    frecAbs <- table(datos$Especie)
    
-   tit <- "ÁRBOLES SEGÚN SU ESPECIE"
+   tit <- "ESPECIE DE LOS ÁRBOLES"
    # Grafico de barras.
    barplot(frecAbs, ylim = c(0, 70), col = "green", main = tit,
            xlab = "Especie", ylab = "Frecuencia absoluta", font.lab = 2)
@@ -94,7 +94,7 @@ tablasOrigen <- function(datos) {
   lbls <- paste(lbls, porcentajes)
   lbls <- paste(lbls, "%")
   
-  tit <- "ÁRBOLES SEGÚN SU ORIGEN"
+  tit <- "ORIGEN DE LOS ÁRBOLES"
   # Pie chart
   pie(frecAbs, labels = lbls, main = tit, col = c("purple", "cyan"), font = 2)
 }
