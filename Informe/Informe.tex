@@ -88,9 +88,10 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Altura de los árboles en metros}}
     \begin{tabular}{| c | r | r | r | r |}
       \hline
-      \multirow{3}{3cm}{\centering\textbf{Intervalos (altura en m)}} & 
+      \multirow{3}{3cm}{\centering\textbf{Intervalos \\ (en m)}} & 
       \multirow{3}{2.5cm}{\centering\textbf{Frecuencia absoluta}} & 
       \multirow{3}{2.5cm}{\centering\textbf{Frecuencia absoluta acumulada}} &
       \multirow{3}{2.5cm}{\centering\textbf{Frecuencia relativa}} & 
@@ -104,6 +105,7 @@
       (20,25] & 53 & 342 & 0.1514 & 0.9771 \\ \hline
       (25,30] & 5 & 347 & 0.0143 & 0.9914 \\ \hline
       (30,35] & 3 & 350 & 0.0086 & 1.0000 \\ \hline
+      \textbf{Total} & \textbf{350} & & \textbf{1} & \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:tablaAltura}
@@ -136,8 +138,7 @@
 
 \begin{justify}
   El gráfico \ref{fig:histAltura} es unimodal y asimétrico hacia la derecha,
-  donde se puede observar
-  que una mayor cantidad de árboles tienen una altura entre 10 y 15 mts.
+  donde se puede observar que el intervalo modal es de 10 a 15 mts.
   Si se observa la figura \ref{fig:acumAltura} 
   junto con la tabla \ref{tab:tablaAltura} se puede ver que aproximadamente
   el 97\% de la arboleda presenta una altura inferior a 25 mts.
@@ -150,9 +151,10 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Diámetro de los árboles en centímetros}}
     \begin{tabular}{| c | r | r | r | r |}
       \hline
-      \multirow{3}{3cm}{\centering\textbf{Intervalos (diámetro en cm)}} & 
+      \multirow{3}{3cm}{\centering\textbf{Intervalos \\ (en cm)}} & 
       \multirow{3}{2.5cm}{\centering\textbf{Frecuencia absoluta}} & 
       \multirow{3}{2.5cm}{\centering\textbf{Frecuencia absoluta acumulada}} &
       \multirow{3}{2.5cm}{\centering\textbf{Frecuencia relativa}} & 
@@ -166,6 +168,7 @@
       (80,100] & 12 & 346 & 0.0343 & 0.9886 \\ \hline
       (100,120] & 2 & 348 & 0.0057 & 0.9943 \\ \hline
       (120,140] & 2 & 350 & 0.0057 & 1.0000 \\ \hline
+      \textbf{Total} & \textbf{350} & & \textbf{1} & \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:tablaDiametro}
@@ -198,8 +201,8 @@
 
 \begin{justify}
   Como se puede observar en el gráfico de la figura \ref{fig:histDiametro}, 
-  éste es asimétrico a la derecha, mostrando una mayor cantidad de árboles que
-  poseen un diámetro de entre 20 y 40 cm. El diámetro promedio resultó ser 
+  éste es asimétrico a la derecha, mostrando que el intervalo modal
+  es de 20 a 40 cm. El diámetro promedio resultó ser 
   de 37.61 cm. Observando la figura
   \ref{fig:acumDiametro} se puede comprobar que aproximadamente el 80\%
   de los árboles tienen un diámetro menor a 60cm.
@@ -211,6 +214,7 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Inclinación de los árboles en grados}}
     \begin{tabular}{| c | r | r | r | r |}
       \hline
       \multirow{3}{3cm}{\centering\textbf{Intervalos (inclinación en °)}} & 
@@ -226,6 +230,7 @@
       [21,28) & 4 & 345 & 0.0114 & 0.9857 \\ \hline
       [28,35) & 2 & 347 & 0.0057 & 0.9914 \\ \hline
       [35,42) & 3 & 350 & 0.0086 & 1.0000 \\ \hline
+      \textbf{Total} & \textbf{350} & & \textbf{1} & \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:tablaInclinacion}
@@ -242,11 +247,10 @@
 
 \begin{justify}
   En el gráfico \ref{fig:boxInclinacion} se observa que la mediana
-  es de 0 grados, siendo que aproximadamente el 73\% de los árboles tienen
-  esta inclinación, y además observando la tabla \ref{tab:tablaInclinacion}
-  se ve que los valores adyacentes que van de una inclinación de 0 a 7 grados
-  componen el 84\% de la arboleda. Fuera de este rango, se encuentran
-  52 observaciones outliers. 
+  es de 0 grados y además observando la tabla \ref{tab:tablaInclinacion}
+  se ve que los valores adyacentes que van de una inclinación de 0 a 7 grados,
+  siendo este el intervalo modal, componen el 84\% de la arboleda.
+  Fuera de este rango, se encuentran 52 observaciones outliers. 
 \end{justify}
 
 % ============================================================================
@@ -255,6 +259,7 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Cantidad de árboles por especie}}
     \begin{tabular}{| c | r |}
       \hline
       \textbf{Especie} & \textbf{Frecuencia absoluta} \\ \hline
@@ -267,6 +272,7 @@
       Fresno & 30 \\ \hline
       Jacarandá & 44 \\ \hline
       Palo borracho & 41 \\ \hline
+      \textbf{Total} & \textbf{350} \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:tablaEspecie}
@@ -295,12 +301,14 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Origen de los árboles}}
     \begin{tabular}{| c | r | r |}
       \hline
       \textbf{Especie} & \textbf{Frecuencia absoluta} & 
       \textbf{Frecuencia relativa} \\ \hline
       Exótico	& 241	& 0.6886 \\ \hline
       Nativo/Autóctono & 109 & 0.3114 \\ \hline
+      \textbf{Total} & \textbf{350} & \textbf{1} \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:tablaOrigen}
@@ -327,6 +335,7 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Árboles por su cantidad de brotes}}
     \begin{tabular}{| c | r | r | r | r |}
       \hline
       \multirow{3}{3cm}{\centering\textbf{Cantidad de brotes}} & 
@@ -345,6 +354,7 @@
       6	& 25	& 341	& 0.0714	& 0.9743 \\ \hline
       7	& 7	& 348	& 0.0200	& 0.9943 \\ \hline
       8	& 2	& 350	& 0.0057	& 1.0000 \\ \hline
+      \textbf{Total} & \textbf{350} & & \textbf{1} & \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:tablaBrotes}
@@ -392,6 +402,7 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Altura de los árboles (en metros) según su especie}}
     \begin{tabular}{| c | r | r | r | r | r | r |}
       \hline
       \textbf{Especie} & \textbf{Mínimo} & \textbf{Máximo} & \textbf{Promedio} &
@@ -435,6 +446,7 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Diámetro de los árboles (en centímetros) según su especie}}
     \begin{tabular}{| c | r | r | r | r | r | r |}
       \hline
       \textbf{Especie} & \textbf{Mínimo} & \textbf{Máximo} & \textbf{Promedio} &
@@ -478,6 +490,7 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Inclinación de los árboles (en grados) según su especie}}
     \begin{tabular}{| c | r | r | r | r | r | r |}
       \hline
       \textbf{Especie} & \textbf{Mínimo} & \textbf{Máximo} & \textbf{Promedio} &
@@ -521,19 +534,21 @@
 
 \begin{table}[h!]
   \begin{center}
+    \caption*{\textbf{Origen de los árboles según su especie}}
     \begin{tabular}{| c | r | r | r |}
       \hline
       \textbf{Especie} & \textbf{Exótico} & \textbf{Nativo/Autóctono} &
       \textbf{Total} \\ \hline
-      Acacia & 18 & 7 & 25 \\ \hline
-      Álamo & 59 & 0 & 59 \\ \hline
-      Casuarina & 55 & 0 & 55 \\ \hline
-      Ceibo & 0 & 17 & 17 \\ \hline
-      Eucalipto & 67 & 0 & 67 \\ \hline
-      Ficus & 12 & 0 & 12 \\ \hline
-      Fresno & 30 & 0 & 30 \\ \hline
-      Jacarandá & 0 & 44 & 44 \\ \hline
-      Palo borracho & 0 & 41 & 41 \\ \hline
+      Acacia & 18 & 7 & \textbf{25} \\ \hline
+      Álamo & 59 & 0 & \textbf{59} \\ \hline
+      Casuarina & 55 & 0 & \textbf{55} \\ \hline
+      Ceibo & 0 & 17 & \textbf{17} \\ \hline
+      Eucalipto & 67 & 0 & \textbf{67} \\ \hline
+      Ficus & 12 & 0 & \textbf{12} \\ \hline
+      Fresno & 30 & 0 & \textbf{30} \\ \hline
+      Jacarandá & 0 & 44 & \textbf{44} \\ \hline
+      Palo borracho & 0 & 41 & \textbf{41} \\ \hline
+      \textbf{Total} & \textbf{241} & \textbf{109} & \textbf{350} \\ \hline
     \end{tabular}
     \caption{}
     \label{tab:tablaOrigenEspecie}
@@ -553,45 +568,6 @@
   las especies que son exclusivamente nativas o exóticas, excepto por la Acacia
   que es tanto nativa como exótica. La mayoria de las especies resultan ser
   de origen exótico.
-\end{justify}
-
-% ============================================================================
-
-\newpage
-\subsection{Brotes/Especie}
-
-\begin{table}[h!]
-  \begin{center}
-    \begin{tabular}{| c | r |}
-      \hline
-      \textbf{Especie} & \textbf{Cantidad de brotes} \\ \hline
-      Acacia & 93 \\ \hline
-      Álamo & 156 \\ \hline
-      Casuarina & 175 \\ \hline
-      Ceibo & 78 \\ \hline
-      Eucalipto & 194 \\ \hline
-      Ficus & 31 \\ \hline
-      Fresno & 91 \\ \hline
-      Jacarandá & 230 \\ \hline
-      Palo borracho & 196 \\ \hline
-    \end{tabular}
-  \caption{}
-  \label{tab:tablaBrotesEspecie}
-  \end{center}
-\end{table}
-
-\begin{figure}[h!]
-  \begin{center}
-    \includegraphics[width=0.9\linewidth]{barrasBrotesEspecie.pdf}
-    \caption{}
-    \label{fig:barrasBrotesEspecie}
-  \end{center}  
-\end{figure}
-1
-\begin{justify}
-  En el gráfico \ref{fig:barrasBrotesEspecie} se puede observar la cantidad
-  de brotes que cada especie de árbol presentó durante el último año, siendo
-  el Jacarandá la especie que mas brotes ha tenido.
 \end{justify}
 
 \end{document}
